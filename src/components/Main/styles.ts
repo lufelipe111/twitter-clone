@@ -1,3 +1,119 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { ArrowLeft, Home, Notifications, Email, Search } from '../../styles/Icons';
 
-styled
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: min(601px, 100%);
+
+  @media(min-width: 500px) { /* A partir de 500px executa o bloco */
+    border-left: 1px solid var(--outline);
+    border-right: 1px solid var(--outline);
+  }
+`;
+
+export const Header = styled.div`
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background: var(--primary);
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  padding: 8px 0 9px 13px;
+  border-bottom: 1px solid var(--outline);
+
+  > button {
+    padding: 8px;
+    border-radius: 50%;
+
+    outline: 0;
+    cursor: pointer;
+    
+    &:hover {
+      background: var(--twitter-dark-hover)
+    }
+  }
+
+`;
+
+export const BackIcon = styled(ArrowLeft)`
+  width: 24px;
+  height: 24px;
+
+  fill: var(--twitter);
+`;
+
+export const ProfileInfo = styled.div`
+  margin-left: 17px;
+
+  display: flex;
+  flex-direction: column;
+
+  > strong {
+    font-size: 19px;
+  }
+
+  > span {
+    font-size: 15px;
+    color: var(--gray);
+  }
+
+`;
+
+export const BottomMenu = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  
+  background: var(--primary);
+  width: 100%;
+  border-top:1px solid var(--outline);
+
+  padding: 8px min(46px, max(10vw, 10px));
+
+  display: flex;
+  justify-content: space-between;
+
+  @media(min-width: 500px) {
+    display: none;
+  }
+`;
+
+const iconCSS = css`
+  width: 31px;
+  height: 31px;
+
+  &:hover, &.active {
+    fill: var(--twitter);
+  }
+`;
+
+export const HomeIcon = styled(Home)`
+  ${iconCSS};
+
+  fill: var(--gray);
+`;
+
+export const SearchIcon = styled(Search)`
+  ${iconCSS};
+
+  fill: var(--gray);
+`;
+
+export const BellIcon = styled(Notifications)`
+  ${iconCSS};
+
+  fill: var(--gray);
+`;
+
+export const EmailIcon = styled(Email)`
+  ${iconCSS};
+
+  fill: var(--gray);
+`;

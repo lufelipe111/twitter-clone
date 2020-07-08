@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../Layouts/styles';
+import { Container, Header, BackIcon, ProfileInfo, BottomMenu, HomeIcon, SearchIcon, BellIcon, EmailIcon} from './styles';
 
 // import { Container } from './styles';
 
@@ -23,13 +23,13 @@ const Main: React.FC = () => {
       {/* <ProfilePage /> */}
 
       {/* Menu inferior */}
-      {/* <BottomMenu>
-        <HomeIcon />
-        <SearhIcon />
+      <BottomMenu>
+        <HomeIcon className="active" />
+        <SearchIcon />
         <BellIcon />
         <EmailIcon />
       </BottomMenu>
-    </Container> */}
+    </Container>
   );
 }
 
