@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Header, BackIcon, ProfileInfo, BottomMenu, HomeIcon, SearchIcon, BellIcon, EmailIcon} from './styles';
 
+import ProfilePage from '../ProfilePage';
+
 // import { Container } from './styles';
 
 const Main: React.FC = () => {
@@ -20,11 +22,11 @@ const Main: React.FC = () => {
       </Header>
 
       {/* Timeline */}
-      {/* <ProfilePage /> */}
+      <ProfilePage />
 
       {/* Menu inferior */}
       <BottomMenu>
-        <HomeIcon className="active" />
+        <HomeIcon />
         <SearchIcon />
         <BellIcon />
         <EmailIcon />
